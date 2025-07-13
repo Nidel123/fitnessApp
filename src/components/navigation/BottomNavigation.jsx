@@ -14,7 +14,7 @@ function BottomNavigation({ active, setActive }) {
   );
 
   return (
-    <div className="w-full h-24 mt-auto flex justify-around pt-4 bg-[#EBF5FA]/50">
+    <div className="w-full mt-auto flex justify-around pt-4">
       <NavItem
         icon={trainingIcon}
         label="Training"

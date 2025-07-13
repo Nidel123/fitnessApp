@@ -8,14 +8,14 @@ function App() {
   const formatLabel = (label) => label.charAt(0).toUpperCase() + label.slice(1);
 
   return (
-    <div className="h-screen flex flex-col">
-      <div>
+    <div className="h-screen flex flex-col overflow-hidden bg-[#F0F3F7]">
+      <div className="">
         <Header title={formatLabel(active)} />
       </div>
       <div className="flex-1 overflow-y-auto relative">
         <MainFrame />
       </div>
-      <div className="h-24">
+      <div className="h-23 bg-[#E4EEF5]  z-1">
         <BottomNavigation active={active} setActive={setActive} />
       </div>
     </div>
