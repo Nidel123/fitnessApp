@@ -7,6 +7,7 @@ import CardMachineConfig from "./CardMachineConfig";
 function CardConfig({ setShowConfig }) {
   const [checked, setChecked] = useState(true);
   const [showMachineConfig, setShowMachineConfig] = useState(false);
+  const [appliedData, setAppliedData] = useState(null);
   return (
     <div className="relative bg-[#F0F3F7] w-full max-w-sm max-h-[80vh] rounded-3xl flex justify-center">
       <div className="relative">
@@ -105,7 +106,6 @@ function CardConfig({ setShowConfig }) {
           showMachineConfig ? "opacity-100" : "opacity-0 pointer-events-none"
         }`}
       />
-
       {showMachineConfig && (
         <div className="absolute flex justify-center w-full mt-5 transition-all duration-300 opacity-100 scale-100 top-20 left-0 z-50">
           <CardMachineConfig setShowMachineConfig={setShowMachineConfig} />
@@ -114,7 +114,7 @@ function CardConfig({ setShowConfig }) {
       {showMachineConfig && (
         <div
           onClick={() => setShowMachineConfig(false)}
-          className="absolute w-screen h-screen z-10"
+          className="absolute w-screen h-[70vh] z-10"
         ></div>
       )}
     </div>
